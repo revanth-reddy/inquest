@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString1
+  email: MyString@yahoo.in
+  college: MyString3
+  Contact_number: 9999999999
+
+two:
+  name: MyString
+  email: MyString@gmail.com
+  college: MyString3
+  Contact_number: 9999999999

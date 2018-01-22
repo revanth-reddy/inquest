@@ -1,0 +1,82 @@
+<% provide(:title, 'Sign up') %>
+
+<section id="contact" >
+<div class="container">
+<div class="row text-center header animate-in" data-anim-type="fade-in-up">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<h3 id="heading"> REGISTRATION </h3>
+<hr />
+
+</div>
+</div>
+
+<div id="main-wrapper">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" id="r-form">
+      <%= form_for(@user, url: signup_path) do |f| %>
+        <%= render 'shared/error_messages' %>
+        <!-- <span class="input input--hoshi">
+          <%= f.label :name ,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.text_field :name, class: 'input__field input__field--hoshi' %>
+        </span>
+        <span class="input input--hoshi">
+          <%= f.label :email ,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.email_field :email, class: 'input__field input__field--hoshi' %>
+        </span>
+        <span class="input input--hoshi">
+          <%= f.label :college ,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.text_field :college, class: 'input__field input__field--hoshi' %>
+        </span>
+        <span class="input input--hoshi">
+          <%= f.label :Contact_number ,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.text_field :Contact_number, class: 'input__field input__field--hoshi' %>
+        </span>
+        <span class="input input--hoshi">
+          <%= f.label :password ,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.password_field :password, class: 'input__field input__field--hoshi' %>
+        </span>
+        <span class="input input--hoshi">
+          <%= f.label :password_confirmation,class: 'input__label input__label--hoshi input__label--hoshi-color-3'%>
+          <%= f.password_field :password_confirmation, class: 'input__field input__field--hoshi' %>
+
+        </span> -->
+        
+          
+            <div id="signup">   
+              <div class="field-wrap">
+                  <%= f.text_field :name,placeholder: "Name"%>
+              </div>
+              <div class="field-wrap">
+                <%= f.email_field :email,placeholder: "Email" %>
+              </div>
+              <div class="field-wrap">
+                <%= f.text_field :college,placeholder: "College" %>
+              </div>
+              <div class="field-wrap">
+                <%= f.text_field :Contact_number,placeholder: "Contact Number" %>
+              </div>
+              <div class="field-wrap">
+                <%= f.password_field :password,placeholder: "Password" %>
+              </div>
+              <div class="field-wrap">
+                <%= f.password_field :password_confirmation,placeholder: "Password Confirmation" %>
+              </div>
+            </div>
+          
+        
+        <%= recaptcha_tags %>
+        <div class="cta">
+          <%= f.submit "Register Me!", class: "btn button-custom btn-custom-two" %>
+          <span><%= link_to "I AM ALREADY A USER",login_path %></span>
+        </div>
+
+      <% end %>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</section>

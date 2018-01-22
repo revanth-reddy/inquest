@@ -1,0 +1,59 @@
+<% provide(:title, current_user.name) %>
+
+<!--CONTACT SECTION START-->
+<section id="contact" >
+  <div class="container">
+    <div class="row animate-in" data-anim-type="fade-in-up">
+      <div class="col-xs-12 col-sm-2  col-md-2 col-lg-2">
+        <div class="level-wrapper">
+          <h3><%= current_user.name %></h3>
+          <p style="font-size:4vh;">Score: <%= current_user.score %></p>
+          <!-- <p style="font-size:4vh;">Rank: <%= find_rank %></p> -->
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <div class="contact-wrapper" >
+          <div class="level-head" ><h1><%= "LEVEL #{@level.id}" %></h1></div>
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+          <div class ="img-responsive" style="width:500px; height:500px; margin:auto;vertical-align:bottom"> <%= image_tag @level.image_url.to_s, :class => "img-responsive" %><br/></div>
+          <% if current_user.score == 29 || current_user.score == 27 || current_user.score == 18 || current_user.score == 11 || current_user.score == 6 %>
+            <div class="question1"><h4><%= @level.question %> </h4></div> </br>
+          <%else%>
+            <div class="question"><h4><%= @level.question %> </h4></div> </br>
+          <%end%>
+          <%= form_for(@attempt) do |f| %>
+						<div class="field">
+							<span class="input input--hoshi">
+			          <%= f.text_field :attempt, class: 'input__field input__field--hoshi',placeholder: "Your answer goes here..."%>
+			        </span>
+							<div class="cta">
+								<%= f.submit "Answer", class: "btn button-custom btn-custom-two" %>
+							</div>
+						</div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <div class="level-wrapper">
+          <h3>participants ahead you: </h3>
+          <p style="font-size:6vh;"><%= User.where(["score > ?", current_user.score]).count %></p>
+        </div>
+      <!--
+        <div class="contact-wrapper">
+          <% if @attempt and @attempts.any? %>
+            <%= "#{pluralize(@attempts.count, "attempt")} so far:" %><br/>
+          <% end %>
+          <ul>
+            <% @attempts.count.times do |n|%>
+              <li> <%= @attempts[n].attempt %> </li>
+            <% end %>
+          </ul>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</section>

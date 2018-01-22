@@ -1,0 +1,37 @@
+<% provide(:title, @user.name) %>
+<!--USER SECTION START-->
+<section id="user" >
+<div class="container">
+<div class="row animate-in" data-anim-type="fade-in-up">
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="user-wrapper">
+<p><h3>Hello</h3></p><p><h2> <%= @user.name %></h2></p>
+<% if current_user.score == 31 %>
+    <h1>
+
+      Congratulations! You have completed InQuest! Check your Rank in Leader's Board!
+
+      </h1>
+    <%  else %>
+      <h1>
+
+      You are currently at level <%= current_user.score %>
+      </h1>
+      <p><h2>Click to
+        <div class="cta">
+          <%= link_to " Play",    level_path(current_user.score) , class: "btn button-custom btn-custom-two"%>
+        </div>
+     </h2></p>
+
+    <% end %>
+</div>
+
+</div>
+</div>
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+</div>
+</section>

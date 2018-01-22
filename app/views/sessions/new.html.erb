@@ -1,0 +1,42 @@
+<% provide(:title, "Log in") %>
+<section id="contact" >
+<div class="container">
+<div class="row text-center header animate-in" data-anim-type="fade-in-up">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<h3> LOGIN </h3>
+<hr />
+
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <!-- <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %> -->
+      <div id="signup">   
+        <div class="field-wrap">
+            <%= f.email_field :email,placeholder: "Email"%>
+        </div>
+        <div class="field-wrap">
+          <%= f.password_field :password,placeholder: "Password" %>
+        </div>
+      </div>
+
+      <!-- <%= f.submit "Log in", class: "btn button-custom btn-custom-two" %> -->
+      <div class="cta">
+        <%= f.submit "Log in", class: "btn button-custom btn-custom-two" %>
+        <span>New user?</span>
+        <span><%= link_to "Sign up now!",signup_path%></span>
+      </div>
+    <% end %>
+    <!-- <p>New user? <%= link_to "Sign up now!", signup_path, :class=>"help-links" %></p> -->
+  </div>
+</div>
+</div>
+</section>

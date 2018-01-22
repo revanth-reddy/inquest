@@ -1,0 +1,38 @@
+<% provide(:title, 'All users') %>
+<section id="contact" >
+<div class="container">
+<div class="row text-center header animate-in" data-anim-type="fade-in-up">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<h3> ALL USERS </h3>
+<hr />
+
+</div>
+</div>
+<%= will_paginate %>
+<div class="table-responsive">
+<table class="table table-condensed table-bordered" style="z-index:9999;">
+<tr>
+<th class="bl"> Position </th>
+<th class="bl"> User Name </th>
+<th class="bl"> College  </th>
+<th class="bl"> Score    </th>
+</tr>
+
+<% @users.each_with_index do |user, index| %>
+  <tr>
+      <% if @page %>
+		    <td><%= (50 * @page.to_i) + index + 1 %></td>
+		  <% else %>
+		    <td> <%= index + 1 %> </td>
+      <% end %>
+        <td> <%= user.name %> </td>
+        <td> <%= user.college %> </td>
+        <td> <%= user.score %> </td>
+			<% end %>
+   </tr>
+</table>
+</div>
+<%= will_paginate %>
+</div>
+</section>
