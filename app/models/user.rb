@@ -7,15 +7,17 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+	validates :username, presence: true, length: { maximum: 50},
+										uniqueness: { case_sensitive: false } 
   validates :college,  presence: true, length: { maximum: 50 }
-  validates :Contact_number,  presence: true, length: { maximum: 10 }      
+  validates :Contact_number,  presence: true, length: { maximum: 10 }
   has_secure_password
-  # validates :password, presence: true, length: { minimum: 6 }  
+  # validates :password, presence: true, length: { minimum: 6 }
   has_many :attempts
 
   private
 
     def allot_score
       self.score = 1
-    end        
+    end
 end

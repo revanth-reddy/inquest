@@ -43,9 +43,12 @@
           <%= f.password_field :password_confirmation, class: 'input__field input__field--hoshi' %>
 
         </span> -->
-        
-          
-            <div id="signup">   
+
+
+            <div id="signup">
+              <div class="field-wrap">
+                  <%= f.text_field :username,placeholder: "Username"%>
+              </div>
               <div class="field-wrap">
                   <%= f.text_field :name,placeholder: "Name"%>
               </div>
@@ -65,9 +68,9 @@
                 <%= f.password_field :password_confirmation,placeholder: "Password Confirmation" %>
               </div>
             </div>
-          
-        
-        <%= recaptcha_tags %>
+
+
+        <!-- <%= recaptcha_tags %> -->
         <div class="cta">
           <%= f.submit "Register Me!", class: "btn button-custom btn-custom-two" %>
           <span><%= link_to "I AM ALREADY A USER",login_path %></span>

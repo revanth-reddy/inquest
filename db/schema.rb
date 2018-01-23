@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170108045638) do
+ActiveRecord::Schema.define(version: 20180122074819) do
 
   create_table "attempts", force: :cascade do |t|
     t.text     "attempt"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170108045638) do
     t.integer  "score"
     t.boolean  "admin",                  default: false
     t.datetime "last_correct_answer_at"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

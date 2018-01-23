@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	 before_action :logged_in_user, only: [:edit, :update, :destroy,:show]
    before_action :correct_user,   only: [:show, :edit, :update]
    before_action :admin_user,     only: [:destroy, :edit_level]
-   
+
   def index
   	@users = User.order('score DESC, last_correct_answer_at ASC, updated_at ASC').paginate(:page => params[:page], :per_page => 50)
     @page  = (params[:page].to_i) -1 if params[:page]
@@ -22,8 +22,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if verify_recaptcha(model: @user) && @user.save
-    # if @user.save
+    # if verify_recaptcha(model: @user) && @user.save
+    if @user.save
       log_in @user
       redirect_to @user
     else
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:username, :name, :email, :password,
                                    :password_confirmation, :college, :Contact_number)
     end
 
@@ -62,5 +62,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
-    
+
 end
