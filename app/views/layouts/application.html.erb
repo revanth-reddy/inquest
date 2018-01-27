@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Inquest | Aarohan 2017</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bangers|Boogaloo|Kumar+One|Lobster|Anton|Lobster|Fredericka+the+Great|Baloo+Chettan" rel="stylesheet">
+
     <%= stylesheet_link_tag "/assets/animations.min.css" %>
     <%= stylesheet_link_tag "/assets/font-awesome.css" %>
     <%= stylesheet_link_tag "/assets/bootstrap.css" %>
@@ -15,20 +16,21 @@
     <%= stylesheet_link_tag "/assets/style.css" %>
     <%= stylesheet_link_tag "/assets/set1.css" %>
     <%= stylesheet_link_tag "/assets/regform.css" %>
+    <%= stylesheet_link_tag "/assets/particle.css" %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <div id="fixed">
-      <div id="background"></div>
-      <div id="midground"></div>
-      <div id="foreground"></div>
-    </div>
+    <!-- Background Start -->
+     <div id="particles-js"></div>
+     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <%= javascript_include_tag '/assets/particle.js' %>
+     <!-- Background End -->
   <!-- <img class="vegas-background" src="images/1.jpg" style="position:fixed; left:-96.33333px; top:0px; width:1400.667px; height:683px; bottom:auto; right:auto;"> -->
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div class="container" style="font-size:initial;font-family: 'Raleway', sans-serif;">
       <!--  <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>  -->
@@ -47,87 +49,6 @@
     <%= javascript_include_tag '/assets/jquery.vegas.min.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '/assets/jquery.fancybox.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '/assets/jquery.fancybox.pack.js', 'data-turbolinks-track': 'reload' %>
-    <script>
-  (function() {
-    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-    if (!String.prototype.trim) {
-      (function() {
-        // Make sure we trim BOM and NBSP
-        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-        String.prototype.trim = function() {
-          return this.replace(rtrim, '');
-        };
-      })();
-    }
-
-    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-      // in case the input is already filled..
-      if( inputEl.value.trim() !== '' ) {
-        classie.add( inputEl.parentNode, 'input--filled' );
-      }
-
-      // events:
-      inputEl.addEventListener( 'focus', onInputFocus );
-      inputEl.addEventListener( 'blur', onInputBlur );
-    } );
-
-    function onInputFocus( ev ) {
-      classie.add( ev.target.parentNode, 'input--filled' );
-    }
-
-    function onInputBlur( ev ) {
-      if( ev.target.value.trim() === '' ) {
-        classie.remove( ev.target.parentNode, 'input--filled' );
-      }
-    }
-  })();
-</script>
-
-<script type="text/javascript">
-  $('.form').find('.input_sign, textarea').on('keyup blur focus', function (e) {
-
-  var $this = $(this),
-      label = $this.prev('.label');
-
-    if (e.type === 'keyup') {
-      if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-      if( $this.val() === '' ) {
-        label.removeClass('active highlight');
-      } else {
-        label.removeClass('highlight');
-      }
-    } else if (e.type === 'focus') {
-
-      if( $this.val() === '' ) {
-        label.removeClass('highlight');
-      }
-      else if( $this.val() !== '' ) {
-        label.addClass('highlight');
-      }
-    }
-
-});
-
-$('.tab a').on('click', function (e) {
-
-  e.preventDefault();
-
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-
-  $(target).fadeIn(600);
-
-});
-</script>
 
   </body>
 </html>
