@@ -24,17 +24,19 @@
   </head>
   <body>
     <!-- Background Start -->
-     <div id="particles-js"></div>
+     <div id="particles-js" style="position: fixed;"></div>
      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
      <%= javascript_include_tag '/assets/particle.js' %>
      <!-- Background End -->
   <!-- <img class="vegas-background" src="images/1.jpg" style="position:fixed; left:-96.33333px; top:0px; width:1400.667px; height:683px; bottom:auto; right:auto;"> -->
     <%= render 'layouts/header' %>
+
     <div class="container" style="font-size:initial;font-family: 'Raleway', sans-serif;">
       <!--  <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>  -->
       <%= yield %>
+
     </div>
     <%= javascript_include_tag '/assets/scripts.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '/assets/classie.js', 'data-turbolinks-track': 'reload' %>
