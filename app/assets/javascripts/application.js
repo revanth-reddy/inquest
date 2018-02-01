@@ -15,3 +15,11 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+// When the user clicks on div, open the pupup
+function pupfunction() {
+	console.log("here!!")
+    var pupup = document.getElementById("mypupup");
+    pupup.classList.toggle("sh");
+}
+

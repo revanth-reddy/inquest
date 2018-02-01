@@ -11,8 +11,8 @@
 </div>
 <%= will_paginate %>
 <div class="table-responsive">
-<table class="table table-condensed table-bordered" style="z-index:9999;">
-<tr>
+<table class="table table-condensed table-hover table-borderless">
+<tr class="header_board">
 <th class="bl"> Position </th>
 <th class="bl"> User Name </th>
 <th class="bl"> College  </th>
@@ -20,7 +20,7 @@
 </tr>
 
 <% @users.each_with_index do |user, index| %>
-  <tr>
+  <tr class="" >
       <% if @page %>
 		    <td><%= (50 * @page.to_i) + index + 1 %></td>
 		  <% else %>

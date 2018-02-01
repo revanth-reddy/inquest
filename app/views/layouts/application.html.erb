@@ -4,9 +4,11 @@
     <title>Inquest | Aarohan 2017</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bangers|Boogaloo|Kumar+One|Lobster|Anton|Lobster|Fredericka+the+Great|Baloo+Chettan" rel="stylesheet">
 
+    <%= stylesheet_link_tag "/assets/registration.css" %>
     <%= stylesheet_link_tag "/assets/animations.min.css" %>
     <%= stylesheet_link_tag "/assets/font-awesome.css" %>
     <%= stylesheet_link_tag "/assets/bootstrap.css" %>
@@ -26,6 +28,7 @@
     <!-- Background Start -->
      <div id="particles-js" style="position: fixed;"></div>
      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
      <%= javascript_include_tag '/assets/particle.js' %>
      <!-- Background End -->
   <!-- <img class="vegas-background" src="images/1.jpg" style="position:fixed; left:-96.33333px; top:0px; width:1400.667px; height:683px; bottom:auto; right:auto;"> -->
@@ -38,6 +41,7 @@
       <%= yield %>
 
     </div>
+    <%= javascript_include_tag '/assets/registration.js' %>
     <%= javascript_include_tag '/assets/scripts.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '/assets/classie.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '/assets/jquery-3.1.1.min.js', 'data-turbolinks-track': 'reload' %>

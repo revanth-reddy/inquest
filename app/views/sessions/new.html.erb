@@ -19,12 +19,12 @@
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %> -->
-      <div id="signup">   
-        <div class="field-wrap">
-            <%= f.email_field :email,placeholder: "Email"%>
+      <div id="signup" class="signup_form">   
+        <div class="field-wrap right-inner-addon"><i class="fa fa-envelope" aria-hidden="true"></i>
+            <%= f.email_field :email,placeholder: "Email",:class => "box" %>
         </div>
-        <div class="field-wrap">
-          <%= f.password_field :password,placeholder: "Password" %>
+        <div class="field-wrap right-inner-addon"><i class="fa fa-lock" aria-hidden="true"></i>
+          <%= f.password_field :password,placeholder: "Password",:class => "box"  %>
         </div>
       </div>
 

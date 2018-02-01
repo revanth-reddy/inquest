@@ -45,27 +45,27 @@
         </span> -->
 
 
-            <div id="signup">
-              <div class="field-wrap">
-                  <%= f.text_field :username,placeholder: "Username"%>
+            <div id="signup" class="signup_form">
+              <div class="field-wrap right-inner-addon" data-tooltip="If u don't want unwanted calls just feed me so that ur frndz can't recognise u !!"><i class="fa fa-user" aria-hidden="true"></i>
+                  <%= f.text_field :username,placeholder: " Username",:class => "box" %>
               </div>
-              <div class="field-wrap">
-                  <%= f.text_field :name,placeholder: "Name"%>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-user-circle" aria-hidden="true"></i><i class="fa fa-user-circle" aria-hidden="true"></i>
+                  <%= f.text_field :name,placeholder: " Name",:class => "box" %>
               </div>
-              <div class="field-wrap">
-                <%= f.email_field :email,placeholder: "Email" %>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                <%= f.email_field :email,placeholder: " Email",:class => "box"  %>
               </div>
-              <div class="field-wrap">
-                <%= f.text_field :college,placeholder: "College" %>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <%= f.text_field :college,placeholder: " College",:class => "box"  %>
               </div>
-              <div class="field-wrap">
-                <%= f.text_field :Contact_number,placeholder: "Contact Number" %>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-mobile" aria-hidden="true"></i>
+                <%= f.text_field :Contact_number,placeholder: " Contact Number",:class => "box"  %>
               </div>
-              <div class="field-wrap">
-                <%= f.password_field :password,placeholder: "Password" %>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-lock" aria-hidden="true"></i>
+                <%= f.password_field :password,placeholder: " Password",:class => "box"  %>
               </div>
-              <div class="field-wrap">
-                <%= f.password_field :password_confirmation,placeholder: "Password Confirmation" %>
+              <div class="field-wrap right-inner-addon"><i class="fa fa-eye" aria-hidden="true"></i>
+                <%= f.password_field :password_confirmation,placeholder: " Password Confirmation",:class => "box"  %>
               </div>
             </div>
 

@@ -13,3 +13,153 @@
  *= require_tree .
  *= require_self
  */
+ input.box{
+ 	-webkit-transition: 0.2s;
+    transition: 0.2s;
+    outline: none;
+    border: 1.0px solid #48a4db;
+    border-radius: 23px 23px 23px 23px;
+    
+ }
+input.box:focus{
+	border: 3px solid #48a4db;
+	transition: 0.5s;
+}
+
+.signup_form {
+	background-color: #ffffff;
+	padding:23px;
+	opacity:1;
+  caret-color:#1580b0;
+	border-radius: 23px 23px 23px 0;
+	box-shadow: #111212 2px 2px 3px 2px;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th {
+  border-top: 0px solid #ddd;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 123px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #18FFFF;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+
+.header_board{
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+/*
+.even{
+  background-color: #4DB6AC;
+}
+
+.odd{
+  background-color: #00796B;
+}*/
+.team_part{
+  background-color: #48a4db;
+  padding:5px;
+  opacity:0.95;
+  border-radius: 23px 23px 23px 0;
+  /*box-shadow: #414444 3px 4px 15px 1px;*/
+}
+
+.right-inner-addon {
+  position: relative;
+}
+
+.right-inner-addon input {
+  padding-right: 30px;
+}
+
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 7px 12px;
+  pointer-events: none;
+  color: #48a4db;
+  font-size: 1.5em;
+}
+
+.table {
+  text-align: center;
+  border-width: 0px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.table-hover > tbody > tr:hover {
+    background-color: #120c3e;
+  }
+input ,textarea{
+  color: black;
+}

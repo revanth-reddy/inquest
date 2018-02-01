@@ -36,7 +36,7 @@ text-transform: uppercase;
 
 .header hr {
 width: 50px;
-border-top: 2px solid rgb(57, 171, 111);
+border-top: 2px solid #48a4db;
 }
 /* =============================================================
 BACKGROUND ANIMATION
@@ -162,7 +162,7 @@ HOME SECTION STYLES
   margin-bottom: 10px;
 }
 .home-wrapper h3{
-  color:  rgb(57, 171, 111);
+  color:  #48a4db;
 }
 #background {
 	background: url(../images/background.png);
@@ -522,12 +522,10 @@ background-size: cover;
 background-position: center;
 -moz-background-size: cover;
 -webkit-background-size: cover;
-padding: 150px 0 10px;
+padding: 225px 0 10px;
 /*background-image: url('../img/girl-big.jpg');*/
-border-top: 1px solid #fff;
-border-right: 1px solid #fff;
-border-left: 1px solid #fff;
-border-radius: 10px 10px 0px 0px;
+
+border-radius: 23px 23px  0 0;
 }
 
 .team-wrapper > .team-inner > a {
@@ -553,16 +551,13 @@ transition: all 0.8s ease-in-out;
 .team-wrapper > .team-inner > a:hover {
 color: #fff;
 text-decoration: none;
-background-color: rgb(57, 171, 111);
+background-color: #4DD0E1;
 }
 
 
 .team-wrapper .description {
 padding: 30px 20px 20px;
 text-align: center;
-border-bottom: 1px solid #fff;
-border-right: 1px solid #fff;
-border-left: 1px solid #fff;
 }
 
 .team-wrapper .description h5 {
@@ -589,7 +584,7 @@ min-height:200px;
 margin-top: 10px;
 }
 #contact .contact-wrapper h3{
-color:rgb(57, 171, 111);
+color: #48a4db;
 }
 #contact .social-below {
 display: block;
@@ -650,11 +645,11 @@ HELP PAGE LINK STYLES
 ==============================*/
 
 .help-links {
-  color: rgb(57, 171, 111);
+  color: #48a4db;
 }
 
 .help-links:hover {
-  color: yellow;
+  color: cyan;
 }
 
 /*============================
@@ -684,8 +679,7 @@ LEVEL PAGE STYLES
 }
 
 .contact-wrapper .question h4{
-  color: rgb(57, 171, 111);
-  margin-top:-100px;
+  color: #ffffff;
 }
 
 .contact-wrapper .question1 h4{
@@ -981,12 +975,12 @@ Register Form
   border: none;
   color: #fff;
   display: inline-block;
-  background: rgb(57, 171, 111);
+  background: #48a4db;
   font-family: 'lato', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.12em;
-  border-radius: 24px;
+  border-radius: 23px 23px 23px 0;
   width:160px;
 
 }
@@ -994,7 +988,7 @@ Register Form
   -webkit-transition: 0.2s ease-in;
   -o-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  background: rgb(57, 171, 111);
+  
 
 }
 .cta span {
